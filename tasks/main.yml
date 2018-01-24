@@ -17,11 +17,11 @@
     state: started
     enabled: yes
 
-- name: Copy Kibana configuration.
-  template:
-    src: kibana.yml.j2
-    dest: "/opt/kibana/config/kibana.yml"
-    owner: root
-    group: root
-    mode: 0644
-  notify: restart kibana
+# - name: Copy Kibana configuration.
+#   template:
+#     src: kibana.yml.j2
+#     dest: "/opt/kibana/config/kibana.yml"
+#     owner: root
+#     group: root
+#     mode: 0644
+#   notify: restart kibana
