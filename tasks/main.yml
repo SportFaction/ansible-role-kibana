@@ -26,6 +26,10 @@
     mode: 0644
   notify: restart kibana
 
+- apt: "name={{ item }} state=installed"
+  with_items:
+    - python-passlib
+    
 - name: Create global htpasswd file
   htpasswd:
     path: /etc/nginx/htpasswd.users
