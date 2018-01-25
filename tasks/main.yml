@@ -25,3 +25,9 @@
     group: root
     mode: 0644
   notify: restart kibana
+
+- name: Create global htpasswd file
+  htpasswd:
+    path: /etc/nginx/htpasswd.users
+    name: "{{ htpasswd_username }}"
+    password: "{{ htpasswd_password }}"
